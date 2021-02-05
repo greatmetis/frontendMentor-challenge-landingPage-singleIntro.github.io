@@ -1,0 +1,268 @@
+/*-------------------*/
+/*-------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: gainsboro;
+}
+
+/*-------------------*/
+/*-------------------*/
+.u-cf::after,
+.u-cf::before {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+}
+
+/*-------------------*/
+/*-------------------*/
+/*-------------------*/
+/*-------------------*/
+body {
+  font-family: "Poppins", "Open Sans", sans-serif, Helvetica, Arial;
+  font-size: 15px;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 60px;
+  line-height: 80px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+h5 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+h6 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Open Sans", sans-serif, Helvetica, Arial;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+/*-------------------*/
+/*-------------------*/
+/*-------------------*/
+/*-------------------*/
+body {
+  width: 100vw;
+  color: #fff;
+  background: #674baf url(../images/bg-desktop.svg);
+}
+
+.imgbox-inner {
+  width: 100%;
+  padding-top: 75%;
+  position: relative;
+}
+
+.imgbox-inner .image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left;
+}
+
+/*-------------------*/
+/*-------------------*/
+.header {
+  padding: 40px 0;
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 50%;
+  }
+}
+
+.main {
+  padding: 40px 0;
+}
+
+.mock-up {
+  padding-top: 32px;
+}
+
+.content {
+  padding: 32px;
+}
+
+.content .slogan {
+  padding-top: 32px;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.content p {
+  opacity: 0.8;
+}
+
+.content .rego-btn {
+  margin-top: 16px;
+  min-width: 150px;
+  padding: 16px 48px;
+  background-color: #fff;
+  color: #674baf;
+  border-radius: 25px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 15px;
+  -webkit-box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 20px 72px;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 30px;
+}
+
+.content .rego-btn:hover {
+  background-color: #e882e8;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .content {
+    text-align: center;
+  }
+  .content .slogan {
+    font-size: 40px;
+  }
+  .content p {
+    font-size: 20px;
+  }
+  .content .rego-btn {
+    margin-top: 32px;
+    width: 70%;
+  }
+}
+
+.social-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.social-group .social-icon {
+  font-size: 20px;
+  margin: 8px;
+  border: 1px #fff solid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.social-group .social-icon:hover {
+  border-color: #e057e0;
+}
+
+.social-group .social-icon:hover > * {
+  color: #e057e0;
+}
+
+@media (max-width: 768px) {
+  .social-group {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.fa-facebook-f,
+.fa-twitter,
+.fa-instagram {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.attribution {
+  color: #aaa;
+  padding-top: 32px;
+  padding-bottom: 8px;
+  opacity: 0.5;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: tan;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.attribution a:hover {
+  color: #f8d8f8;
+}
+
+.attribution a:hover::after {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

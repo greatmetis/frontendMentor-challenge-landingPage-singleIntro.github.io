@@ -1,0 +1,249 @@
+/*-------------------*/
+// ## Reset
+/*-------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: gainsboro;
+}
+
+/*-------------------*/
+// ## Utility
+/*-------------------*/
+.u-cf::after,
+.u-cf::before {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+}
+/*-------------------*/
+// ## Color
+/*-------------------*/
+$color--primary: hsl(257, 40%, 49%);
+$color--primary-soft: hsl(300, 69%, 71%);
+
+/*-------------------*/
+// ## Typography
+/*-------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+body {
+  font-family: "Poppins", "Open Sans", sans-serif, Helvetica, Arial;
+  font-size: 15px;
+}
+h1 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 60px;
+  line-height: 80px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+h2 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+h3 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+h4 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+}
+h5 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+}
+h6 {
+  font-family: "Poppins", sans-serif, Helvetica, Arial;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+p {
+  font-family: "Open Sans", sans-serif, Helvetica, Arial;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+}
+/*-------------------*/
+// ## Mixin
+/*-------------------*/
+@mixin button($bgColor: #fff, $color: $color--primary) {
+  min-width: 150px;
+  padding: 16px 48px;
+  background-color: #fff;
+  color: $color;
+  border-radius: 25px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 15px;
+  box-shadow: 2px 3px 15px rgba(black, 0.3);
+  transition: 0.2s;
+  &:hover {
+    background-color: $color--primary-soft;
+    color: #fff;
+  }
+}
+
+/*-------------------*/
+// ## Global
+/*-------------------*/
+body {
+  width: 100vw;
+  color: #fff;
+  background: $color--primary url(../images/bg-desktop.svg);
+}
+// image
+
+.imgbox-inner {
+  width: 100%;
+  padding-top: 75%;
+  position: relative;
+  .image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: left;
+  }
+}
+
+/*-------------------*/
+// ## Components
+/*-------------------*/
+.header {
+  padding: 40px 0;
+}
+@media (max-width: 480px) {
+  .logo {
+    img {
+      width: 50%;
+    }
+  }
+}
+.main {
+  padding: 40px 0;
+}
+.mock-up {
+  padding-top: 32px;
+}
+
+.content {
+  padding: 32px;
+  .slogan {
+    padding-top: 32px;
+    font-size: 42px;
+    font-weight: 600;
+  }
+  p {
+    opacity: 0.8;
+  }
+  .rego-btn {
+    margin-top: 16px;
+    @include button;
+    padding: 20px 72px;
+    font-size: 20px;
+    line-height: 20px;
+    border-radius: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    text-align: center;
+    .slogan {
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+    }
+    .rego-btn {
+      margin-top: 32px;
+      width: 70%;
+    }
+  }
+}
+// social
+.social-group {
+  display: flex;
+  justify-content: flex-end;
+  .social-icon {
+    font-size: 20px;
+    margin: 8px;
+    border: 1px #fff solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      border-color: darken($color--primary-soft, 10);
+      & > * {
+        color: darken($color--primary-soft, 10);
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .social-group {
+    justify-content: center;
+  }
+}
+.fa-facebook-f,
+.fa-twitter,
+.fa-instagram {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+// Footer
+.attribution {
+  color: #aaa;
+  padding-top: 32px;
+  padding-bottom: 8px;
+  opacity: 0.5;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  &::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: tan;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.2s;
+  }
+  &:hover {
+    color: lighten($color--primary-soft, 20);
+    &::after {
+      width: 100%;
+    }
+  }
+}
